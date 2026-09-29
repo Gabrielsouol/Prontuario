@@ -1,0 +1,615 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #c9c4c5;
+
+    min-height: 100vh;
+}
+
+
+/* =====================================
+   CABEÇALHO
+===================================== */
+
+.cabecalho {
+
+    height: 65px;
+
+    width: 100%;
+
+    background-color: #10143f;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-left: 15px;
+
+    gap: 8px;
+}
+
+
+/* =====================================
+   LOGO
+===================================== */
+
+.logo {
+
+    font-size: 34px;
+
+    font-weight: bold;
+
+    letter-spacing: -1.5px;
+}
+
+
+.logo span:first-child {
+
+    color: white;
+}
+
+
+.logo span:last-child {
+
+    color: #08b5c5;
+}
+
+
+/* =====================================
+   MENU DOS TRÊS PONTOS
+===================================== */
+
+.menu-container {
+
+    position: relative;
+}
+
+
+/* BOTÃO */
+
+.menu-botao {
+
+    width: 35px;
+
+    height: 40px;
+
+    border: none;
+
+    background: transparent;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 4px;
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+
+/* TRÊS PONTOS */
+
+.menu-botao span {
+
+    width: 5px;
+
+    height: 5px;
+
+    background-color: white;
+
+    border-radius: 50%;
+}
+
+
+/* =====================================
+   MENU DROPDOWN
+===================================== */
+
+.menu-dropdown {
+
+    position: absolute;
+
+    top: 42px;
+
+    left: 0;
+
+    width: 140px;
+
+    background-color: white;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.25);
+
+    display: none;
+
+    z-index: 1000;
+}
+
+
+/* LINKS */
+
+.menu-dropdown a {
+
+    display: block;
+
+    padding: 12px 15px;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+
+/* QUANDO PASSAR O MOUSE */
+
+.menu-dropdown a:hover {
+
+    background-color: #eeeeee;
+}
+
+
+/* MENU ABERTO */
+
+.menu-dropdown.ativo {
+
+    display: block;
+}
+
+
+/* =====================================
+   ÁREA PRINCIPAL
+===================================== */
+
+.principal {
+
+    min-height: calc(100vh - 65px);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+}
+
+
+/* =====================================
+   CARD DE LOGIN
+===================================== */
+
+.login-card {
+
+    width: 347px;
+
+    min-height: 372px;
+
+    background-color: #f5f5f5;
+
+    border: 1px solid #bdbdbd;
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.15);
+
+    padding: 17px 15px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* =====================================
+   CARD DE CADASTRO
+===================================== */
+
+.cadastro-card {
+
+    width: 515px;
+
+    min-height: 430px;
+
+    background-color: #f5f5f5;
+
+    border: 1px solid #bdbdbd;
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.15);
+
+    padding: 10px 15px 12px;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* =====================================
+   ÍCONE
+===================================== */
+
+.icone {
+
+    width: 55px;
+
+    height: 55px;
+
+    margin: 0 auto 4px;
+}
+
+
+.icone svg {
+
+    width: 100%;
+
+    height: 100%;
+}
+
+
+/* =====================================
+   TÍTULO
+===================================== */
+
+h1 {
+
+    text-align: center;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: #050505;
+}
+
+
+.subtitulo {
+
+    text-align: center;
+
+    font-size: 12px;
+
+    color: #555;
+
+    margin-top: 3px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================
+   FORMULÁRIO
+===================================== */
+
+form {
+
+    width: 100%;
+}
+
+
+label {
+
+    display: block;
+
+    font-size: 12px;
+
+    color: #111;
+
+    margin-bottom: 7px;
+}
+
+
+input,
+select {
+
+    width: 100%;
+
+    height: 30px;
+
+    border: 1px solid #999;
+
+    border-radius: 4px;
+
+    background-color: #f7f7f7;
+
+    padding: 0 11px;
+
+    font-size: 11px;
+
+    outline: none;
+}
+
+
+input:focus,
+select:focus {
+
+    border-color: #10143f;
+}
+
+
+input::placeholder {
+
+    color: #888;
+}
+
+
+/* =====================================
+   LOGIN
+===================================== */
+
+.login-card form label {
+
+    margin-bottom: 8px;
+}
+
+
+.login-card input {
+
+    margin-bottom: 15px;
+}
+
+
+/* ESQUECEU A SENHA */
+
+.esqueci {
+
+    display: block;
+
+    width: fit-content;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    color: #004fe6;
+
+    text-decoration: none;
+
+    margin-top: -7px;
+
+    margin-bottom: 19px;
+}
+
+
+.esqueci:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =====================================
+   BOTÕES
+===================================== */
+
+button {
+
+    border: none;
+
+    border-radius: 4px;
+
+    background-color: #10143f;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.login-card button {
+
+    width: 100%;
+
+    height: 30px;
+
+    font-size: 13px;
+}
+
+
+button:hover {
+
+    background-color: #171c52;
+}
+
+
+/* =====================================
+   CRIAR CONTA
+===================================== */
+
+.criar-conta {
+
+    text-align: center;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    margin-top: 20px;
+
+    color: #0052e6;
+}
+
+
+.criar-conta a {
+
+    color: #0052e6;
+
+    text-decoration: none;
+}
+
+
+.criar-conta a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =====================================
+   FORMULÁRIO DE CADASTRO
+===================================== */
+
+.form-cadastro {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 72px;
+
+    row-gap: 8px;
+
+    padding: 0 0;
+}
+
+
+/* CADA CAMPO */
+
+.campo {
+
+    width: 100%;
+}
+
+
+/* CAMPO QUE OCUPA A LINHA INTEIRA */
+
+.campo-completo {
+
+    grid-column: 1 / 3;
+}
+
+
+/* SELECT */
+
+select {
+
+    appearance: auto;
+
+    cursor: pointer;
+}
+
+
+/* =====================================
+ BOTÃO CADASTRAR
+===================================== */
+
+.botao-cadastro {
+
+    grid-column: 1 / 3;
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 5px;
+}
+
+
+.botao-cadastro button {
+
+    width: 317px;
+
+    height: 30px;
+
+    font-size: 13px;
+}
+
+
+/* =====================================
+   CADASTRO - LINK
+===================================== */
+
+.cadastro-card .criar-conta {
+
+    margin-top: 7px;
+}
+
+
+/* =====================================
+   RESPONSIVIDADE
+===================================== */
+
+@media (max-width: 600px) {
+
+    .cabecalho {
+
+        height: 60px;
+
+        padding-left: 10px;
+    }
+
+
+    .logo {
+
+        font-size: 30px;
+    }
+
+
+    .principal {
+
+        min-height: calc(100vh - 60px);
+
+        padding: 20px 15px;
+    }
+
+
+    .login-card,
+    .cadastro-card {
+
+        width: 100%;
+
+        max-width: 515px;
+    }
+
+
+    .form-cadastro {
+
+        grid-template-columns: 1fr;
+
+        column-gap: 0;
+
+        row-gap: 10px;
+    }
+
+
+    .campo-completo {
+
+        grid-column: 1;
+    }
+
+
+    .botao-cadastro {
+
+        grid-column: 1;
+    }
+
+
+    .botao-cadastro button {
+
+        width: 100%;
+    }
+
+}
